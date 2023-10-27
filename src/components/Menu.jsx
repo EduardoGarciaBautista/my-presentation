@@ -28,7 +28,7 @@ const StyledMenu = styled.footer`
 const fixedButtons = [
   {
     icon: "fa-id-card",
-    text: "Perfil",
+    text: "Presentation",
     active: true,
   },
   {
