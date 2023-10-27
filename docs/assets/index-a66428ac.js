@@ -277,7 +277,7 @@ Error generating stack: `+l.message+`
 `,n0=()=>C.jsxs(t0,{children:[C.jsx("h1",{children:"Here you can see the tools an technologies that ive used alongside my career as Developer"}),C.jsx("div",{className:"tools-container",children:e0.map((e,t)=>C.jsx(bm,{title:e.title,icon:e.icon},t))})]}),r0=re.div`
   background-color: var(--primary);
   color: var(--secondary);
-  height: 100dvh;
+  height: 100vh;
   padding: 2rem 0 .5rem 0;
   display: grid;
   grid-template-areas: "header" "main" "menu";

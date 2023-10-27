@@ -13,7 +13,7 @@ import Tools from "./Tools";
 const StyledLanding = styled.div`
   background-color: var(--primary);
   color: var(--secondary);
-  height: 100dvh;
+  height: 100vh;
   padding: 2rem 0 .5rem 0;
   display: grid;
   grid-template-areas: "header" "main" "menu";
