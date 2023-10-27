@@ -265,9 +265,6 @@ Error generating stack: `+l.message+`
   height: 100%;
   > p {
     margin-bottom: 1rem;
-    /* color: var(--background);
-    text-shadow: -1px 0px 3px var(--neumorphic-top),
-      1px 0px 3px var(--neumorphic-bottom); */
   }
 
   .tools-container {
