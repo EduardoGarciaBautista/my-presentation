@@ -6,6 +6,7 @@ const StyledCard = styled.div`
   box-shadow: -5px -5px 10px 3px var(--neumorphic-top),
     5px 5px 10px 3px var(--neumorphic-bottom);
     overflow: hidden;
+    z-index: 1;
 `;
 
 const Card = ({ children, className }) => {

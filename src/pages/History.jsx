@@ -116,12 +116,11 @@ const StyledHistory = styled.section`
     box-shadow: -3px 3px 8px 3px var(--neumorphic-bottom),
       3px -3px 8px 3px var(--neumorphic-top);
     border-radius: 50%;
-    background: rgb(39, 39, 39);
     background: linear-gradient(
       51deg,
-      rgba(39, 39, 39, 1) 0%,
-      rgba(64, 64, 64, 1) 50%,
-      rgba(75, 75, 75, 1) 100%
+      var(--circle-color-1) 0%,
+      var(--circle-color-2) 50%,
+      var(--circle-color-3) 100%
     );
     z-index: 10;
     padding: 6px;
@@ -163,9 +162,8 @@ const StyledHistory = styled.section`
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      color: var(--primary-color);
       i {
-        color: var(--font-color);
+        color: var(--primary-color);
         position: absolute;
         left: 0;
       }
@@ -199,6 +197,7 @@ const History = () => {
       <div className="job-list">
         {list.map((item, index) => (
           <JobItem
+            activeItem={view.title === item.title}
             onSelected={() => setView(item)}
             key={item.title}
             title={item.title}

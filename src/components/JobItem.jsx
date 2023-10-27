@@ -1,5 +1,19 @@
-import styled from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
+const hueRotate = keyframes`
+  from {
+    /* opacity: 0; */
+    filter: hue-rotate(0deg);
+  }
+  to {
+    /* opacity: 1; */
+    filter: hue-rotate(360deg);
+  }
+`;
+
+const styles = css`
+  animation: ${hueRotate} 2s linear infinite;
+`
 const StyledJobItem = styled.div`
   box-shadow: -2px -2px 5px 0px var(--neumorphic-top),
     2px 2px 5px 0px var(--neumorphic-bottom);
@@ -18,6 +32,7 @@ const StyledJobItem = styled.div`
     justify-content: center;
     align-items: center;
     font-weight: bolder;
+    ${props => props.$activeItem && styles}
   }
   h1 {
     font-size: 14px;
@@ -39,9 +54,9 @@ const StyledJobItem = styled.div`
     color: var(--primary-color);
   }
 `;
-const JobItem = ({ title, job, time, index, onSelected }) => {
+const JobItem = ({ title, job, time, index, onSelected, activeItem }) => {
   return (
-    <StyledJobItem onClick={onSelected}>
+    <StyledJobItem onClick={onSelected} $activeItem={activeItem}>
       <span className="indicator">{index}</span>
       <h1>
         <i className="fa-solid fa-building-user"></i>
