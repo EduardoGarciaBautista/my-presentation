@@ -69,6 +69,7 @@ const tools = [
 ];
 
 const StyledTools = styled.section`
+
   h1 {
     font-size: 20px;
     margin-bottom: 1rem;
@@ -82,6 +83,8 @@ const StyledTools = styled.section`
     flex-wrap: wrap;
     column-gap: 1.5rem;
     row-gap: 1rem;
+    justify-content: center;
+    align-items: center;
     padding: 8px;
   }
 `;
