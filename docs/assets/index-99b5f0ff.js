@@ -228,6 +228,7 @@ Error generating stack: `+l.message+`
     overflow: hidden;
 `,qm=({children:e,className:t})=>C.jsx(Jm,{className:t,children:e}),ha=[{title:"Indra",job:"Front End Developer",icon:"fa-brands fa-html5",time:"Jun 2022 - Present"},{title:"Neoris",job:"Front End Developer",icon:"fa-brands fa-html5",time:"Feb 2021 - Jun 2022"},{title:"Upax",job:"Front End Developer",icon:"fa-brands fa-html5",time:"Jun 2020 - Nov 2020"},{title:"IDS Comercial",job:"Full Stack Developer",icon:"fa-brands fa-html5",time:"Sept 2018 - Jun 2020"}],bm=ee.section`
   overflow-y: auto;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;

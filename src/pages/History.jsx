@@ -31,6 +31,7 @@ const list = [
 
 const StyledHistory = styled.section`
   overflow-y: auto;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
