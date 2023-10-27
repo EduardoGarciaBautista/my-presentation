@@ -7,6 +7,7 @@ const StyledCarousel = styled.ul`
   overflow: auto;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
+  height: 100%;
   li {
     flex-shrink: 0;
     width: 100%;
