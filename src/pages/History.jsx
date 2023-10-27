@@ -8,24 +8,62 @@ const list = [
     job: "Front End Developer",
     icon: "fa-brands fa-html5",
     time: "Jun 2022 - Present",
+    tasks: [
+      "Apis integration",
+      "UI designs to web pages",
+      "Mobile first design",
+      "Reverse proxies",
+      "Task documentation",
+      "Fix production defects",
+      "User stories analysis",
+      "Join me to scrum ceremonies",
+      "Code review",
+      "Deploy features into different environments ",
+    ],
   },
   {
     title: "Neoris",
     job: "Front End Developer",
     icon: "fa-brands fa-html5",
     time: "Feb 2021 - Jun 2022",
+    tasks: [
+      "Apis integration",
+      "Third party libraries",
+      "UI designs to web pages",
+      "Responsive design",
+      "Google maps integration",
+      "Translate whole page to different languages",
+      "Creation of new modules and features",
+      "Fix production bugs",
+    ],
   },
   {
     title: "Upax",
     job: "Front End Developer",
     icon: "fa-brands fa-html5",
     time: "Jun 2020 - Nov 2020",
+    tasks: [
+      "Apis integration",
+      "Third party libraries",
+      "UI designs to web pages",
+      "Responsive design",
+      "React js experience",
+    ],
   },
   {
     title: "IDS Comercial",
     job: "Full Stack Developer",
     icon: "fa-brands fa-html5",
     time: "Sept 2018 - Jun 2020",
+    tasks: [
+      "Bootstrap integration",
+      "Apis integration",
+      "Data base tables update",
+      "Update API endpoints",
+      "Fix bugs",
+      "User stories analysis",
+      "Use cases analysis",
+    ],
   },
 ];
 
@@ -106,12 +144,32 @@ const StyledHistory = styled.section`
     color: var(--primary-color);
     display: block;
   }
-  .experience-description {
-    color: var(--font-secondary-color);
-    font-size: 12px;
+
+  .task-list {
+    list-style: none;
+    font-size: 11px;
     width: 50%;
     position: absolute;
     right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    top: 0;
+    li {
+      padding-left: 1rem;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      color: var(--primary-color);
+      i {
+        color: var(--font-color);
+        position: absolute;
+        left: 0;
+      }
+    }
   }
 `;
 
@@ -129,12 +187,14 @@ const History = () => {
             </p>
           </div>
         </div>
-        <p className="experience-description">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum,
-          asperiores? Consequatur suscipit culpa, odio nihil at placeat nostrum
-          distinctio ipsum omnis voluptas, quaerat perspiciatis ullam pariatur
-          perferendis dicta, aliquid officiis.
-        </p>
+        <ul className="task-list">
+          {view?.tasks.map((task, index) => (
+            <li key={index}>
+              <i className="fa-regular fa-circle-check"></i>
+              {task}
+            </li>
+          ))}
+        </ul>
       </Card>
       <div className="job-list">
         {list.map((item, index) => (
