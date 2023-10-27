@@ -262,6 +262,7 @@ Error generating stack: `+l.message+`
   }
 `,bm=({title:e,icon:t})=>C.jsx(qm,{children:C.jsxs("div",{className:"box",children:[C.jsx("i",{className:t}),C.jsx("p",{children:e})]})}),e0=[{title:"Angular",icon:"fa-brands fa-angular"},{title:"React",icon:"fa-brands fa-react"},{title:"Jvascript",icon:"fa-brands fa-square-js"},{title:"Typescript",icon:"fa-solid fa-code"},{title:"Webpack",icon:"fa-solid fa-minimize"},{title:"Nginx",icon:"fa-regular fa-face-grin-squint"},{title:"NgRx",icon:"fa-regular fa-face-grin-squint"},{title:"Css",icon:"fa-brands fa-css3"},{title:"SaaS",icon:"fa-brands fa-sass"},{title:"Bootstrap",icon:"fa-brands fa-bootstrap"},{title:"Html",icon:"fa-brands fa-html5"},{title:"MySql",icon:"fa-solid fa-database"},{title:"Firebase",icon:"fa-brands fa-free-code-camp"},{title:"Git",icon:"fa-brands fa-github"},{title:"Jira",icon:"fa-brands fa-jira"},{title:"Trello",icon:"fa-brands fa-trello"}],t0=re.section`
   overflow-y: auto;
+  height: 100%;
   > p {
     margin-bottom: 1rem;
     /* color: var(--background);

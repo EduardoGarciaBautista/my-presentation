@@ -70,6 +70,7 @@ const tools = [
 
 const StyledTools = styled.section`
   overflow-y: auto;
+  height: 100%;
   > p {
     margin-bottom: 1rem;
     /* color: var(--background);
