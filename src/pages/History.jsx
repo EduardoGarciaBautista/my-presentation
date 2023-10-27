@@ -32,7 +32,7 @@ const list = [
 const StyledHistory = styled.section`
   overflow-y: auto;
   height: 100%;
-  padding-top: 1.5rem;
+  padding-top: 1rem;
 
   .job-list {
     display: flex;
@@ -47,6 +47,9 @@ const StyledHistory = styled.section`
     position: relative;
     margin: auto;
     margin-bottom: 2rem;
+    position: sticky;
+    background-color: var(--background);
+    top: 0;
   }
   .card::before {
     content: "";
