@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const StyledToolItem = styled.div`
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   box-shadow: -4px -4px 6px 0px var(--neumorphic-top),
     4px 4px 6px 0px var(--neumorphic-bottom);
   border-radius: 5px;

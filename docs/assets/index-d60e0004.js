@@ -232,8 +232,8 @@ Error generating stack: `+l.message+`
     text-align: center;
   }
 `,Zm=[{title:"Indra",job:"Front End Developer",icon:"fa-brands fa-html5",time:"Jun 2022 - Present"},{title:"Neoris",job:"Front End Developer",icon:"fa-brands fa-html5",time:"Feb 2021 - Jun 2022"},{title:"Upax",job:"Front End Developer",icon:"fa-brands fa-html5",time:"Jun 2020 - Nov 2020"},{title:"IDS Comercial",job:"Full Stack Developer",icon:"fa-brands fa-html5",time:"Sept 2018 - Jun 2020"}],Jm=()=>C.jsxs(Xm,{children:[C.jsx("p",{children:"Here you can see all my work history."}),C.jsx("section",{children:Zm.map((e,t)=>C.jsx(Gm,{title:e.title,job:e.job,icon:e.icon,index:t+1,time:e.time},e.title))})]}),qm=re.div`
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   box-shadow: -4px -4px 6px 0px var(--neumorphic-top),
     4px 4px 6px 0px var(--neumorphic-bottom);
   border-radius: 5px;
