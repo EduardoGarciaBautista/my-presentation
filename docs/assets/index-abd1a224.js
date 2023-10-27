@@ -164,8 +164,8 @@ Error generating stack: `+l.message+`
 `;function Wm(){return C.jsxs(Vm,{children:[C.jsx(Am,{route:Hm}),C.jsx(Mm,{}),C.jsx(Bm,{})]})}const Qm=ee.main`
   overflow: hidden;
   grid-area: main;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   padding-bottom: 0;
   display: flex;
   justify-content: center;
@@ -228,23 +228,22 @@ Error generating stack: `+l.message+`
     overflow: hidden;
 `,qm=({children:e,className:t})=>C.jsx(Jm,{className:t,children:e}),ha=[{title:"Indra",job:"Front End Developer",icon:"fa-brands fa-html5",time:"Jun 2022 - Present"},{title:"Neoris",job:"Front End Developer",icon:"fa-brands fa-html5",time:"Feb 2021 - Jun 2022"},{title:"Upax",job:"Front End Developer",icon:"fa-brands fa-html5",time:"Jun 2020 - Nov 2020"},{title:"IDS Comercial",job:"Full Stack Developer",icon:"fa-brands fa-html5",time:"Sept 2018 - Jun 2020"}],bm=ee.section`
   overflow-y: auto;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2.5rem;
+  height: 100%;
+  padding-top: 1.5rem;
 
   .job-list {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
+    padding-bottom: 1rem;
   }
   .card {
     width: 90%;
     height: 200px;
     position: relative;
+    margin: auto;
+    margin-bottom: 2rem;
   }
   .card::before {
     content: "";
@@ -308,7 +307,7 @@ Error generating stack: `+l.message+`
     position: absolute;
     right: 1rem;
   }
-`,e0=()=>{const[e,t]=$t.useState(ha[0]);return C.jsxs(bm,{children:[C.jsx("p",{children:"Here you can see all my work history."}),C.jsxs(qm,{className:"card",children:[C.jsx("div",{className:"circle",children:C.jsx("div",{className:"circle-content",children:C.jsxs("p",{children:[e.title,C.jsx("span",{className:"experience",children:"Experience"})]})})}),C.jsx("p",{className:"experience-description",children:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, asperiores? Consequatur suscipit culpa, odio nihil at placeat nostrum distinctio ipsum omnis voluptas, quaerat perspiciatis ullam pariatur perferendis dicta, aliquid officiis."})]}),C.jsx("div",{className:"job-list",children:ha.map((n,r)=>C.jsx(Zm,{onSelected:()=>t(n),title:n.title,job:n.job,icon:n.icon,index:r+1,time:n.time},n.title))})]})},t0=ee.div`
+`,e0=()=>{const[e,t]=$t.useState(ha[0]);return C.jsxs(bm,{children:[C.jsxs(qm,{className:"card",children:[C.jsx("div",{className:"circle",children:C.jsx("div",{className:"circle-content",children:C.jsxs("p",{children:[e.title,C.jsx("span",{className:"experience",children:"Experience"})]})})}),C.jsx("p",{className:"experience-description",children:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, asperiores? Consequatur suscipit culpa, odio nihil at placeat nostrum distinctio ipsum omnis voluptas, quaerat perspiciatis ullam pariatur perferendis dicta, aliquid officiis."})]}),C.jsx("div",{className:"job-list",children:ha.map((n,r)=>C.jsx(Zm,{onSelected:()=>t(n),title:n.title,job:n.job,icon:n.icon,index:r+1,time:n.time},n.title))})]})},t0=ee.div`
   width: 60px;
   height: 60px;
   box-shadow: -4px -4px 6px 0px var(--neumorphic-top),

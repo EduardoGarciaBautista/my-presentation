@@ -31,23 +31,22 @@ const list = [
 
 const StyledHistory = styled.section`
   overflow-y: auto;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2.5rem;
+  height: 100%;
+  padding-top: 1.5rem;
 
   .job-list {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
+    padding-bottom: 1rem;
   }
   .card {
     width: 90%;
     height: 200px;
     position: relative;
+    margin: auto;
+    margin-bottom: 2rem;
   }
   .card::before {
     content: "";
@@ -118,8 +117,6 @@ const History = () => {
 
   return (
     <StyledHistory>
-      <p>Here you can see all my work history.</p>
-
       <Card className="card">
         <div className="circle">
           <div className="circle-content">
