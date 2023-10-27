@@ -69,6 +69,7 @@ const tools = [
 ];
 
 const StyledTools = styled.section`
+  overflow-y: auto;
   > p {
     margin-bottom: 1rem;
     /* color: var(--background);

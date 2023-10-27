@@ -47,7 +47,6 @@ function Landing() {
           <Profile />
           <History />
           <Tools />
-          <Profile />
         </Carousel>
       </Main>
 

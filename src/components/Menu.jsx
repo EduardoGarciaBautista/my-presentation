@@ -33,17 +33,12 @@ const fixedButtons = [
   },
   {
     icon: "fa-timeline",
-    text: "Historial",
+    text: "History",
     active: false,
   },
   {
     icon: "fa-code",
     text: "Tools",
-    active: false,
-  },
-  {
-    icon: "fa-graduation-cap",
-    text: "Certifications",
     active: false,
   },
 ];
