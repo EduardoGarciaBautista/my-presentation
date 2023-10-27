@@ -1,6 +1,29 @@
 import styled from "styled-components";
 import Button from "./Button";
 
+const options = [
+  {
+    id: 1,
+    icon: "fa-brands fa-linkedin-in",
+    link: "",
+  },
+  {
+    id: 2,
+    icon: "fa-brands fa-github",
+    link: "https://github.com/EduardoGarciaBautista",
+  },
+  {
+    id: 3,
+    icon: "fa-solid fa-print",
+    link: "https://res.cloudinary.com/dv6lfepzc/image/upload/v1698381398/portfolio/lb5bbbgbkbm5motnbcm2.pdf",
+  },
+  {
+    id: 4,
+    icon: "fa-brands fa-whatsapp",
+    link: "",
+  },
+];
+
 const StyledActions = styled.div`
   display: flex;
   justify-content: space-between;
@@ -16,18 +39,11 @@ const StyledActions = styled.div`
 function Actions() {
   return (
     <StyledActions>
-      <Button type="flat">
-        <i className="fa-brands fa-linkedin-in"></i>
-      </Button>
-      <Button type="flat">
-        <i className="fa-brands fa-github"></i>
-      </Button>
-      <Button type="flat">
-        <i className="fa-solid fa-print"></i>
-      </Button>
-      <Button type="flat">
-        <i className="fa-brands fa-whatsapp"></i>
-      </Button>
+      {options.map((option) => (
+        <Button type="link" target="_blank" key={option.id} link={option.link}>
+          <i className={option.icon}></i>
+        </Button>
+      ))}
     </StyledActions>
   );
 }

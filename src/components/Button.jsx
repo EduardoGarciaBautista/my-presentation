@@ -51,6 +51,7 @@ function Button({
   onClick,
   active = false,
   link,
+  target = "_self",
 }) {
   return (
     <>
@@ -66,10 +67,11 @@ function Button({
       )}
       {type === "link" && (
         <StyledLink
-          href={`#${link}`}
+          href={link}
           onClick={onClick}
           $active={active}
           $color={color}
+          target={target}
         >
           {children}
         </StyledLink>

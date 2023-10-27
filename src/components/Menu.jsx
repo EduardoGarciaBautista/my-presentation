@@ -63,7 +63,7 @@ export default function Menu({ onSelect }) {
             <Button
               color="var(--font-color)"
               type="link"
-              link={`carousel-item${index + 1}`}
+              link={`#carousel-item${index + 1}`}
               active={button.active}
               onClick={() => handleActiveButton(button.text)}
             >

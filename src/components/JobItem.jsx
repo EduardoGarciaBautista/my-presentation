@@ -39,9 +39,9 @@ const StyledJobItem = styled.div`
     color: var(--primary-color);
   }
 `;
-const JobItem = ({ title, job, time, index }) => {
+const JobItem = ({ title, job, time, index, onSelected }) => {
   return (
-    <StyledJobItem>
+    <StyledJobItem onClick={onSelected}>
       <span className="indicator">{index}</span>
       <h1>
         <i className="fa-solid fa-building-user"></i>
