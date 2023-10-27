@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 const StyledMain = styled.main`
-  height: 100%;
-  overflow-y: auto;
+  overflow: hidden;
   grid-area: main;
   padding-left: 2rem;
   padding-right: 2rem;

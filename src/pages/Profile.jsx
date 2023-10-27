@@ -9,6 +9,9 @@ const StyledProfile = styled.section`
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  height: 100%;
+  overflow-y: auto;
+  padding-top: 1rem;
 `;
 
 export default function Profile() {

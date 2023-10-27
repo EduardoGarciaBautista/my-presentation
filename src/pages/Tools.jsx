@@ -69,9 +69,7 @@ const tools = [
 ];
 
 const StyledTools = styled.section`
-
-  h1 {
-    font-size: 20px;
+  > p {
     margin-bottom: 1rem;
     /* color: var(--background);
     text-shadow: -1px 0px 3px var(--neumorphic-top),
@@ -92,10 +90,10 @@ const StyledTools = styled.section`
 const Tools = () => {
   return (
     <StyledTools>
-      <h1>
+      <p>
         Here you can see the tools an technologies that ive used alongside my
         career as Developer
-      </h1>
+      </p>
 
       <div className="tools-container">
         {tools.map((tool, index) => {

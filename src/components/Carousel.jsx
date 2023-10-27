@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
 const StyledCarousel = styled.ul`
-  padding-top: 1rem;
   display: flex;
   list-style: none;
-  overflow: auto;
+  overflow-x: auto;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   height: 100%;

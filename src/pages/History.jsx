@@ -9,6 +9,9 @@ const StyledHistory = styled.section`
     gap: 2rem;
     justify-content: center;
   }
+  > p {
+    text-align: center;
+  }
 `;
 
 const list = [

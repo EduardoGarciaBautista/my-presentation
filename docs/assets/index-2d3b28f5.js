@@ -158,9 +158,11 @@ Error generating stack: `+l.message+`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-`;function ha(){return C.jsxs(Hm,{children:[C.jsx(Fm,{route:Bm}),C.jsx(Dm,{}),C.jsx(Um,{})]})}const Vm=re.main`
   height: 100%;
   overflow-y: auto;
+  padding-top: 1rem;
+`;function ha(){return C.jsxs(Hm,{children:[C.jsx(Fm,{route:Bm}),C.jsx(Dm,{}),C.jsx(Um,{})]})}const Vm=re.main`
+  overflow: hidden;
   grid-area: main;
   padding-left: 2rem;
   padding-right: 2rem;
@@ -169,10 +171,9 @@ Error generating stack: `+l.message+`
   justify-content: center;
   align-items: center;
 `,Wm=({children:e})=>C.jsx(Vm,{children:e}),Qm=re.ul`
-  padding-top: 1rem;
   display: flex;
   list-style: none;
-  overflow: auto;
+  overflow-x: auto;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   height: 100%;
@@ -227,6 +228,9 @@ Error generating stack: `+l.message+`
     gap: 2rem;
     justify-content: center;
   }
+  > p {
+    text-align: center;
+  }
 `,Zm=[{title:"Indra",job:"Front End Developer",icon:"fa-brands fa-html5",time:"Jun 2022 - Present"},{title:"Neoris",job:"Front End Developer",icon:"fa-brands fa-html5",time:"Feb 2021 - Jun 2022"},{title:"Upax",job:"Front End Developer",icon:"fa-brands fa-html5",time:"Jun 2020 - Nov 2020"},{title:"IDS Comercial",job:"Full Stack Developer",icon:"fa-brands fa-html5",time:"Sept 2018 - Jun 2020"}],Jm=()=>C.jsxs(Xm,{children:[C.jsx("p",{children:"Here you can see all my work history."}),C.jsx("section",{children:Zm.map((e,t)=>C.jsx(Gm,{title:e.title,job:e.job,icon:e.icon,index:t+1,time:e.time},e.title))})]}),qm=re.div`
   width: 50px;
   height: 50px;
@@ -257,9 +261,7 @@ Error generating stack: `+l.message+`
     }
   }
 `,bm=({title:e,icon:t})=>C.jsx(qm,{children:C.jsxs("div",{className:"box",children:[C.jsx("i",{className:t}),C.jsx("p",{children:e})]})}),e0=[{title:"Angular",icon:"fa-brands fa-angular"},{title:"React",icon:"fa-brands fa-react"},{title:"Jvascript",icon:"fa-brands fa-square-js"},{title:"Typescript",icon:"fa-solid fa-code"},{title:"Webpack",icon:"fa-solid fa-minimize"},{title:"Nginx",icon:"fa-regular fa-face-grin-squint"},{title:"NgRx",icon:"fa-regular fa-face-grin-squint"},{title:"Css",icon:"fa-brands fa-css3"},{title:"SaaS",icon:"fa-brands fa-sass"},{title:"Bootstrap",icon:"fa-brands fa-bootstrap"},{title:"Html",icon:"fa-brands fa-html5"},{title:"MySql",icon:"fa-solid fa-database"},{title:"Firebase",icon:"fa-brands fa-free-code-camp"},{title:"Git",icon:"fa-brands fa-github"},{title:"Jira",icon:"fa-brands fa-jira"},{title:"Trello",icon:"fa-brands fa-trello"}],t0=re.section`
-
-  h1 {
-    font-size: 20px;
+  > p {
     margin-bottom: 1rem;
     /* color: var(--background);
     text-shadow: -1px 0px 3px var(--neumorphic-top),
@@ -275,7 +277,7 @@ Error generating stack: `+l.message+`
     align-items: center;
     padding: 8px;
   }
-`,n0=()=>C.jsxs(t0,{children:[C.jsx("h1",{children:"Here you can see the tools an technologies that ive used alongside my career as Developer"}),C.jsx("div",{className:"tools-container",children:e0.map((e,t)=>C.jsx(bm,{title:e.title,icon:e.icon},t))})]}),r0=re.div`
+`,n0=()=>C.jsxs(t0,{children:[C.jsx("p",{children:"Here you can see the tools an technologies that ive used alongside my career as Developer"}),C.jsx("div",{className:"tools-container",children:e0.map((e,t)=>C.jsx(bm,{title:e.title,icon:e.icon},t))})]}),r0=re.div`
   background-color: var(--primary);
   color: var(--secondary);
   height: 100dvh;
