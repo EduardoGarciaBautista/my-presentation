@@ -5,7 +5,7 @@ const options = [
   {
     id: 1,
     icon: "fa-brands fa-linkedin-in",
-    link: "",
+    link: "www.linkedin.com/in/eduardogb97",
   },
   {
     id: 2,
@@ -19,8 +19,8 @@ const options = [
   },
   {
     id: 4,
-    icon: "fa-brands fa-whatsapp",
-    link: "",
+    icon: "fa-solid fa-phone-volume",
+    link: "tel:5521945266",
   },
 ];
 

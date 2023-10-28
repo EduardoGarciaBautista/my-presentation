@@ -34,6 +34,8 @@ const GlobalStyles = createGlobalStyle`
 
     html {
         scroll-behavior: smooth;
+        display: flex;
+        justify-content: center;
     }
     
     body {

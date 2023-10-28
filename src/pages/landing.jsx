@@ -20,13 +20,13 @@ const StyledLanding = styled.div`
   grid-template-rows: 36px 1fr 38px;
   grid-template-columns: 1fr;
   gap: 20px;
+  max-width: 600px;
 `;
 
 function Landing() {
   const [title, setTitle] = useState("Perfil");
 
   function handleSelectMenuOption(option) {
-    console.log(option);
     setTitle(option);
   }
 

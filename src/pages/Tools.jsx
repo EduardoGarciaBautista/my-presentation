@@ -73,12 +73,13 @@ const StyledTools = styled.section`
   height: 100%;
   > p {
     margin-bottom: 1rem;
+    text-align: center;
   }
 
   .tools-container {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 1.5rem;
+    column-gap: 1rem;
     row-gap: 1rem;
     justify-content: center;
     align-items: center;
@@ -90,8 +91,7 @@ const Tools = () => {
   return (
     <StyledTools>
       <p>
-        Here you can see the tools an technologies that ive used alongside my
-        career as Developer
+        Tools and technologies that ive used alongside my career as Developer
       </p>
 
       <div className="tools-container">

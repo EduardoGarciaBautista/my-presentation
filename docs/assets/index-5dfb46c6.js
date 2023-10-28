@@ -113,7 +113,7 @@ Error generating stack: `+i.message+`
   align-items: center;
   grid-area: header;
   padding: 0 2rem;
-`;function Om({children:e}){return C.jsx(Lm,{children:e})}const Dm=[{id:1,icon:"fa-brands fa-linkedin-in",link:""},{id:2,icon:"fa-brands fa-github",link:"https://github.com/EduardoGarciaBautista"},{id:3,icon:"fa-solid fa-print",link:"https://res.cloudinary.com/dv6lfepzc/image/upload/v1698381398/portfolio/lb5bbbgbkbm5motnbcm2.pdf"},{id:4,icon:"fa-brands fa-whatsapp",link:""}],Mm=ee.div`
+`;function Om({children:e}){return C.jsx(Lm,{children:e})}const Dm=[{id:1,icon:"fa-brands fa-linkedin-in",link:"www.linkedin.com/in/eduardogb97"},{id:2,icon:"fa-brands fa-github",link:"https://github.com/EduardoGarciaBautista"},{id:3,icon:"fa-solid fa-print",link:"https://res.cloudinary.com/dv6lfepzc/image/upload/v1698381398/portfolio/lb5bbbgbkbm5motnbcm2.pdf"},{id:4,icon:"fa-solid fa-phone-volume",link:"tel:5521945266"}],Mm=ee.div`
   display: flex;
   justify-content: space-between;
   gap: 2rem;
@@ -375,18 +375,19 @@ Error generating stack: `+i.message+`
   height: 100%;
   > p {
     margin-bottom: 1rem;
+    text-align: center;
   }
 
   .tools-container {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 1.5rem;
+    column-gap: 1rem;
     row-gap: 1rem;
     justify-content: center;
     align-items: center;
     padding: 8px;
   }
-`,s0=()=>C.jsxs(u0,{children:[C.jsx("p",{children:"Here you can see the tools an technologies that ive used alongside my career as Developer"}),C.jsx("div",{className:"tools-container",children:l0.map((e,t)=>C.jsx(i0,{title:e.title,icon:e.icon},t))})]}),a0=ee.div`
+`,s0=()=>C.jsxs(u0,{children:[C.jsx("p",{children:"Tools and technologies that ive used alongside my career as Developer"}),C.jsx("div",{className:"tools-container",children:l0.map((e,t)=>C.jsx(i0,{title:e.title,icon:e.icon},t))})]}),a0=ee.div`
   background-color: var(--primary);
   color: var(--secondary);
   height: 100dvh;
@@ -396,7 +397,8 @@ Error generating stack: `+i.message+`
   grid-template-rows: 36px 1fr 38px;
   grid-template-columns: 1fr;
   gap: 20px;
-`;function c0(){const[e,t]=$t.useState("Perfil");function n(r){console.log(r),t(r)}return C.jsxs(a0,{children:[C.jsxs(Om,{children:[C.jsx(Qo,{children:C.jsx("i",{className:"fa-solid fa-sun"})}),C.jsx(jm,{title:e}),C.jsx(Qo,{children:C.jsx("i",{className:"fa-solid fa-moon"})})]}),C.jsx(Ym,{children:C.jsxs(Xm,{selected:e,children:[C.jsx(Qm,{}),C.jsx(r0,{}),C.jsx(s0,{})]})}),C.jsx($m,{onSelect:n})]})}function f0(){return C.jsx(c0,{})}const d0=_m`
+  max-width: 600px;
+`;function c0(){const[e,t]=$t.useState("Perfil");function n(r){t(r)}return C.jsxs(a0,{children:[C.jsxs(Om,{children:[C.jsx(Qo,{children:C.jsx("i",{className:"fa-solid fa-sun"})}),C.jsx(jm,{title:e}),C.jsx(Qo,{children:C.jsx("i",{className:"fa-solid fa-moon"})})]}),C.jsx(Ym,{children:C.jsxs(Xm,{selected:e,children:[C.jsx(Qm,{}),C.jsx(r0,{}),C.jsx(s0,{})]})}),C.jsx($m,{onSelect:n})]})}function f0(){return C.jsx(c0,{})}const d0=_m`
     * {
         padding: 0;
         margin: 0;
@@ -430,6 +432,8 @@ Error generating stack: `+i.message+`
 
     html {
         scroll-behavior: smooth;
+        display: flex;
+        justify-content: center;
     }
     
     body {
