@@ -6,6 +6,21 @@ const StyledHeader = styled.header`
   align-items: center;
   grid-area: header;
   padding: 0 2rem;
+  button:first-of-type {
+    color: var(--primary-color);
+  }
+  button:last-of-type {
+    color: var(--disabled);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    button:first-of-type {
+      color: var(--disabled);
+    }
+    button:last-of-type {
+      color: var(--primary-color);
+    }
+  }
 `;
 
 export default function Header({ children }) {

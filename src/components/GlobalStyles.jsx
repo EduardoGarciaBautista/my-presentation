@@ -16,6 +16,7 @@ const GlobalStyles = createGlobalStyle`
         --circle-color-1: #c2cadd;
         --circle-color-2: #f4f6f7;
         --circle-color-3: #f4f6f7;
+        --disabled: #80808052;
     }
 
     @media (prefers-color-scheme: dark) {

@@ -25,7 +25,7 @@ const StyledLanding = styled.div`
 `;
 
 function Landing() {
-  const [title, setTitle] = useState("Perfil");
+  const [title, setTitle] = useState("Presentation");
 
   function handleSelectMenuOption(option) {
     setTitle(option);

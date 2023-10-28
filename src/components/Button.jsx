@@ -52,21 +52,33 @@ function Button({
   active = false,
   link,
   target = "_self",
+  className,
 }) {
   return (
     <>
       {type === "small" && (
-        <StyledBaseButton onClick={onClick} $active={active} $color={color}>
+        <StyledBaseButton
+          className={className}
+          onClick={onClick}
+          $active={active}
+          $color={color}
+        >
           {children}
         </StyledBaseButton>
       )}
       {type === "flat" && (
-        <StyledFlatButton onClick={onClick} $active={active} $color={color}>
+        <StyledFlatButton
+          className={className}
+          onClick={onClick}
+          $active={active}
+          $color={color}
+        >
           {children}
         </StyledFlatButton>
       )}
       {type === "link" && (
         <StyledLink
+          className={className}
           href={link}
           onClick={onClick}
           $active={active}

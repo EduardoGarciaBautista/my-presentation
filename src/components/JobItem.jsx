@@ -1,18 +1,18 @@
 import styled, { css, keyframes } from "styled-components";
 
-const hueRotate = keyframes`
-  from {
-    /* opacity: 0; */
-    filter: hue-rotate(0deg);
+const active = keyframes`
+from {
+  box-shadow: -2px -2px 5px 0px var(--neumorphic-top),
+    2px 2px 5px 0px var(--neumorphic-bottom);
   }
   to {
-    /* opacity: 1; */
-    filter: hue-rotate(360deg);
+    box-shadow: inset -2px -2px 5px 0px var(--neumorphic-top), 
+    inset 2px 2px 5px 0px var(--neumorphic-bottom);;
   }
 `;
 
-const styles = css`
-  animation: ${hueRotate} 2s linear infinite;
+const activeStyle = css`
+  animation: ${active} 300ms ease-in forwards;
 `;
 const StyledJobItem = styled.div`
   box-shadow: -2px -2px 5px 0px var(--neumorphic-top),
@@ -21,6 +21,7 @@ const StyledJobItem = styled.div`
   height: 130px;
   border-radius: 15px;
   padding: 8px;
+  ${(props) => props.$activeItem && activeStyle}};
 
   .indicator {
     box-shadow: inset -2px -2px 3px 0px var(--neumorphic-top),
@@ -32,7 +33,6 @@ const StyledJobItem = styled.div`
     justify-content: center;
     align-items: center;
     font-weight: bolder;
-    ${(props) => props.$activeItem && styles}
   }
   h1 {
     font-size: 14px;
