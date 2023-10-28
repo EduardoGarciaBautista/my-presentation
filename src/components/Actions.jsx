@@ -13,11 +13,6 @@ const options = [
     link: "https://github.com/EduardoGarciaBautista",
   },
   {
-    id: 3,
-    icon: "fa-solid fa-print",
-    link: "https://res.cloudinary.com/dv6lfepzc/image/upload/v1698381398/portfolio/lb5bbbgbkbm5motnbcm2.pdf",
-  },
-  {
     id: 4,
     icon: "fa-solid fa-phone-volume",
     link: "tel:5521945266",

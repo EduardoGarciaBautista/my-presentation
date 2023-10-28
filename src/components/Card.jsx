@@ -9,6 +9,7 @@ const StyledCard = styled.div`
     z-index: 1;
 `;
 
+
 const Card = ({ children, className }) => {
   return <StyledCard className={className}>{children}</StyledCard>;
 };

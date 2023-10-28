@@ -13,7 +13,7 @@ const hueRotate = keyframes`
 
 const styles = css`
   animation: ${hueRotate} 2s linear infinite;
-`
+`;
 const StyledJobItem = styled.div`
   box-shadow: -2px -2px 5px 0px var(--neumorphic-top),
     2px 2px 5px 0px var(--neumorphic-bottom);
@@ -32,7 +32,7 @@ const StyledJobItem = styled.div`
     justify-content: center;
     align-items: center;
     font-weight: bolder;
-    ${props => props.$activeItem && styles}
+    ${(props) => props.$activeItem && styles}
   }
   h1 {
     font-size: 14px;

@@ -9,6 +9,7 @@ import Main from "../components/Main";
 import Carousel from "../components/Carousel";
 import History from "./History";
 import Tools from "./Tools";
+import Projects from "./Projects";
 
 const StyledLanding = styled.div`
   background-color: var(--primary);
@@ -47,6 +48,7 @@ function Landing() {
           <Profile />
           <History />
           <Tools />
+          <Projects />
         </Carousel>
       </Main>
 

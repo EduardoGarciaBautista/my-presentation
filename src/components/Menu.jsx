@@ -41,6 +41,11 @@ const fixedButtons = [
     text: "Tools",
     active: false,
   },
+  {
+    icon: "fa-regular fa-folder-open",
+    text: "Projects",
+    active: false,
+  }
 ];
 export default function Menu({ onSelect }) {
   const [buttons, setButtons] = useState(fixedButtons);
