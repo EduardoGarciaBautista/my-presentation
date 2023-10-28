@@ -128,7 +128,7 @@ Error generating stack: `+i.message+`
       color: var(--primary-color);
     }
   }
-`;function Om({children:e}){return E.jsx(Lm,{children:e})}const Dm=[{id:1,icon:"fa-brands fa-linkedin-in",link:"www.linkedin.com/in/eduardogb97"},{id:2,icon:"fa-brands fa-github",link:"https://github.com/EduardoGarciaBautista"},{id:4,icon:"fa-solid fa-phone-volume",link:"tel:5521945266"}],Mm=q.div`
+`;function Om({children:e}){return E.jsx(Lm,{children:e})}const Dm=[{id:1,icon:"fa-brands fa-linkedin-in",link:"https://www.linkedin.com/in/eduardogb97"},{id:2,icon:"fa-brands fa-github",link:"https://github.com/EduardoGarciaBautista"},{id:4,icon:"fa-solid fa-phone-volume",link:"tel:5521945266"}],Mm=q.div`
   display: flex;
   justify-content: space-between;
   gap: 2rem;

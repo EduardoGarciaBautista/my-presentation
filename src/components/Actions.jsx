@@ -5,7 +5,7 @@ const options = [
   {
     id: 1,
     icon: "fa-brands fa-linkedin-in",
-    link: "www.linkedin.com/in/eduardogb97",
+    link: "https://www.linkedin.com/in/eduardogb97",
   },
   {
     id: 2,
