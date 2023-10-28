@@ -21,7 +21,7 @@ const StyledJobItem = styled.div`
   height: 130px;
   border-radius: 15px;
   padding: 8px;
-  ${(props) => props.$activeItem && activeStyle}};
+  ${(props) => props.$activeItem && activeStyle};
 
   .indicator {
     box-shadow: inset -2px -2px 3px 0px var(--neumorphic-top),
