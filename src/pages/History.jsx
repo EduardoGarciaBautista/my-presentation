@@ -20,6 +20,7 @@ const list = [
       "Code review",
       "Deploy features into different environments ",
     ],
+    percentage: 40,
   },
   {
     title: "Neoris",
@@ -36,6 +37,7 @@ const list = [
       "Creation of new modules and features",
       "Fix production bugs",
     ],
+    percentage: 40,
   },
   {
     title: "Upax",
@@ -49,12 +51,13 @@ const list = [
       "Responsive design",
       "React js experience",
     ],
+    percentage: 40,
   },
   {
     title: "IDS Comercial",
     job: "Full Stack Developer",
     icon: "fa-brands fa-html5",
-    time: "Sept 2018 - Jun 2020",
+    time: "Sep 2018 - Jun 2020",
     tasks: [
       "Bootstrap integration",
       "Apis integration",
@@ -64,6 +67,7 @@ const list = [
       "User stories analysis",
       "Use cases analysis",
     ],
+    percentage: 40,
   },
 ];
 
@@ -84,10 +88,13 @@ const StyledHistory = styled.section`
     height: 200px;
     position: relative;
     margin: auto;
-    margin-bottom: 2rem;
     position: sticky;
     background-color: var(--background);
     top: 0;
+    box-shadow: inset -2px -2px 6px 2px var(--neumorphic-top),
+      inset 2px 2px 6px 2px var(--neumorphic-bottom);
+    border-radius: 30px;
+    margin-bottom: 3rem;
   }
   .card::before {
     content: "";
@@ -169,6 +176,53 @@ const StyledHistory = styled.section`
       }
     }
   }
+
+  .equalizer {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+  }
+  .equalizer-item {
+    height: 100%;
+    width: 30px;
+    box-shadow: -1px 1px 1px 1px var(--neumorphic-top),
+      1px -1px 1px 0px var(--neumorphic-bottom);
+    border-radius: 30px;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    display: flex;
+    span {
+      position: absolute;
+      width: max-content;
+      writing-mode: vertical-rl;
+      line-height: 30px;
+      height: 90%;
+    }
+  }
+  .equalizer-bar {
+    height: 50%;
+    width: 100%;
+    background-color: var(--primary-color);
+    border-radius: 30px;
+    transition-duration: 300ms;
+  }
+
+  .equalizer-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: var(--font-color);
+    z-index: 1;
+    bottom: -1px;
+    border: 10px solid var(--background);
+  }
+  .active {
+    height: 100% !important;
+  }
 `;
 
 const History = () => {
@@ -194,18 +248,25 @@ const History = () => {
           ))}
         </ul>
       </Card>
-      <div className="job-list">
+
+      <div className="equalizer">
         {list.map((item, index) => (
-          <JobItem
-            activeItem={view.title === item.title}
-            onSelected={() => setView(item)}
-            key={item.title}
-            title={item.title}
-            job={item.job}
-            icon={item.icon}
-            index={index + 1}
-            time={item.time}
-          />
+          <>
+            <div
+              className="equalizer-item"
+              key={index}
+              onClick={() => setView(item)}
+            >
+              <span>{item.title}</span>
+              <div
+                className={`equalizer-bar ${
+                  view.title === item.title ? "active" : ""
+                }`}
+                style={{ height: item.percentage + "%" }}
+              ></div>
+              <div className="equalizer-circle"></div>
+            </div>
+          </>
         ))}
       </div>
     </StyledHistory>

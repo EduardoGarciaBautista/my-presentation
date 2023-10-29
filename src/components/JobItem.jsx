@@ -1,27 +1,14 @@
-import styled, { css, keyframes } from "styled-components";
+import styled from "styled-components";
 
-const active = keyframes`
-from {
-  box-shadow: -2px -2px 5px 0px var(--neumorphic-top),
-    2px 2px 5px 0px var(--neumorphic-bottom);
-  }
-  to {
-    box-shadow: inset -2px -2px 5px 0px var(--neumorphic-top), 
-    inset 2px 2px 5px 0px var(--neumorphic-bottom);;
-  }
-`;
-
-const activeStyle = css`
-  animation: ${active} 300ms ease-in forwards;
-`;
 const StyledJobItem = styled.div`
-  box-shadow: -2px -2px 5px 0px var(--neumorphic-top),
-    2px 2px 5px 0px var(--neumorphic-bottom);
   width: 130px;
   height: 130px;
   border-radius: 15px;
   padding: 8px;
-  ${(props) => props.$activeItem && activeStyle};
+  box-shadow: ${(props) =>
+    props.$activeItem
+      ? " inset -2px -2px 5px 0px var(--neumorphic-top), inset 2px 2px 5px 0px var(--neumorphic-bottom);"
+      : "-2px -2px 5px 0px var(--neumorphic-top),    2px 2px 5px 0px var(--neumorphic-bottom)"};
 
   .indicator {
     box-shadow: inset -2px -2px 3px 0px var(--neumorphic-top),
