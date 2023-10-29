@@ -254,7 +254,6 @@ Error generating stack: `+i.message+`
     padding-bottom: 1rem;
   }
   .card {
-    width: 90%;
     height: 200px;
     position: relative;
     margin: auto;
@@ -319,12 +318,13 @@ Error generating stack: `+i.message+`
   .experience {
     color: var(--primary-color);
     display: block;
+    font-size: 9px;
   }
 
   .task-list {
     list-style: none;
     font-size: 11px;
-    width: 50%;
+    width: 55%;
     position: absolute;
     right: 1rem;
     display: flex;
@@ -388,12 +388,12 @@ Error generating stack: `+i.message+`
     background-color: var(--font-color);
     z-index: 1;
     bottom: -1px;
-    border: 10px solid var(--background);
+    border: 5px solid var(--background);
   }
   .active {
     height: 100% !important;
   }
-`,qm=()=>{const[e,t]=Lt.useState(ha[0]);return E.jsxs(Jm,{children:[E.jsxs(Zm,{className:"card",children:[E.jsx("div",{className:"circle",children:E.jsx("div",{className:"circle-content",children:E.jsxs("p",{children:[e.title,E.jsx("span",{className:"experience",children:"Experience"})]})})}),E.jsx("ul",{className:"task-list",children:e==null?void 0:e.tasks.map((n,r)=>E.jsxs("li",{children:[E.jsx("i",{className:"fa-regular fa-circle-check"}),n]},r))})]}),E.jsx("div",{className:"equalizer",children:ha.map((n,r)=>E.jsx(E.Fragment,{children:E.jsxs("div",{className:"equalizer-item",onClick:()=>t(n),children:[E.jsx("span",{children:n.title}),E.jsx("div",{className:`equalizer-bar ${e.title===n.title?"active":""}`,style:{height:n.percentage+"%"}}),E.jsx("div",{className:"equalizer-circle"})]},r)}))})]})},bm=q.div`
+`,qm=()=>{const[e,t]=Lt.useState(ha[0]);return E.jsxs(Jm,{children:[E.jsxs(Zm,{className:"card",children:[E.jsx("div",{className:"circle",children:E.jsx("div",{className:"circle-content",children:E.jsxs("p",{children:[e.title,E.jsx("span",{className:"experience",children:e.time})]})})}),E.jsx("ul",{className:"task-list",children:e==null?void 0:e.tasks.map((n,r)=>E.jsxs("li",{children:[E.jsx("i",{className:"fa-regular fa-circle-check"}),n]},r))})]}),E.jsx("div",{className:"equalizer",children:ha.map((n,r)=>E.jsx(E.Fragment,{children:E.jsxs("div",{className:"equalizer-item",onClick:()=>t(n),children:[E.jsx("span",{children:n.title}),E.jsx("div",{className:`equalizer-bar ${e.title===n.title?"active":""}`,style:{height:n.percentage+"%"}}),E.jsx("div",{className:"equalizer-circle"})]},r)}))})]})},bm=q.div`
   width: 60px;
   height: 60px;
   box-shadow: -4px -4px 6px 0px var(--neumorphic-top),

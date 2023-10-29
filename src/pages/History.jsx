@@ -84,7 +84,6 @@ const StyledHistory = styled.section`
     padding-bottom: 1rem;
   }
   .card {
-    width: 90%;
     height: 200px;
     position: relative;
     margin: auto;
@@ -149,12 +148,13 @@ const StyledHistory = styled.section`
   .experience {
     color: var(--primary-color);
     display: block;
+    font-size: 9px;
   }
 
   .task-list {
     list-style: none;
     font-size: 11px;
-    width: 50%;
+    width: 55%;
     position: absolute;
     right: 1rem;
     display: flex;
@@ -218,7 +218,7 @@ const StyledHistory = styled.section`
     background-color: var(--font-color);
     z-index: 1;
     bottom: -1px;
-    border: 10px solid var(--background);
+    border: 5px solid var(--background);
   }
   .active {
     height: 100% !important;
@@ -235,7 +235,7 @@ const History = () => {
           <div className="circle-content">
             <p>
               {view.title}
-              <span className="experience">Experience</span>
+              <span className="experience">{view.time}</span>
             </p>
           </div>
         </div>
