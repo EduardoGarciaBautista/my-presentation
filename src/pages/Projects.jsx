@@ -78,9 +78,7 @@ const Projects = () => {
 
   return (
     <StyledProject>
-      <p>
-        Some small projects to practice 💪
-      </p>
+      <p>Some small projects to practice 💪</p>
       {projects.map((project) => (
         <div className="details" key={project.title}>
           <figure>
@@ -89,7 +87,7 @@ const Projects = () => {
           <Button onClick={() => handleOpenTab(project.link)}>
             <i className="fa-solid fa-link"></i>
           </Button>
-          <Button className={project.repo === "" ? "disabled" : ""}>
+          <Button onClick={() => handleOpenTab(project.repo)} className={project.repo === "" ? "disabled" : ""}>
             <i className="fa-solid fa-code-branch"></i>
           </Button>
           <h3>{project.title}</h3>

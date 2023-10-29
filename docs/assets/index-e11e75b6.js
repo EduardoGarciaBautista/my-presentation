@@ -451,7 +451,7 @@ from {
   p {
     text-align: center;
   }
-`,f0=()=>{const e=t=>{window.open(t,"_blank")};return E.jsxs(c0,{children:[E.jsx("p",{children:"Some small projects to practice 💪"}),a0.map(t=>E.jsxs("div",{className:"details",children:[E.jsx("figure",{children:E.jsx("img",{src:t.icon,alt:""})}),E.jsx(Mn,{onClick:()=>e(t.link),children:E.jsx("i",{className:"fa-solid fa-link"})}),E.jsx(Mn,{className:t.repo===""?"disabled":"",children:E.jsx("i",{className:"fa-solid fa-code-branch"})}),E.jsx("h3",{children:t.title})]},t.title))]})},d0=q.div`
+`,f0=()=>{const e=t=>{window.open(t,"_blank")};return E.jsxs(c0,{children:[E.jsx("p",{children:"Some small projects to practice 💪"}),a0.map(t=>E.jsxs("div",{className:"details",children:[E.jsx("figure",{children:E.jsx("img",{src:t.icon,alt:""})}),E.jsx(Mn,{onClick:()=>e(t.link),children:E.jsx("i",{className:"fa-solid fa-link"})}),E.jsx(Mn,{onClick:()=>e(t.repo),className:t.repo===""?"disabled":"",children:E.jsx("i",{className:"fa-solid fa-code-branch"})}),E.jsx("h3",{children:t.title})]},t.title))]})},d0=q.div`
   background-color: var(--primary);
   color: var(--secondary);
   height: 100dvh;
