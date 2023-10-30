@@ -251,8 +251,8 @@ const History = () => {
           time={view.time}
         >
           <ul className="task-list">
-            {view?.tasks.map((task, index) => (
-              <li key={index}>
+            {view?.tasks.map((task) => (
+              <li key={task}>
                 <i className="fa-regular fa-circle-check"></i>
                 {task}
               </li>
@@ -262,27 +262,25 @@ const History = () => {
       )}
 
       <div className="equalizer">
-        {list.map((item, index) => (
-          <>
+        {list.map((item) => (
+          <div
+            className="equalizer-item"
+            key={item.title}
+            onClick={() => setView(item)}
+          >
+            <span>{item.title}</span>
             <div
-              className="equalizer-item"
-              key={index}
-              onClick={() => setView(item)}
-            >
-              <span>{item.title}</span>
-              <div
-                className={`equalizer-bar ${
-                  view.title === item.title ? "active" : ""
-                }`}
-                style={{ width: item.percentage + "%" }}
-              ></div>
-              <div className="equalizer-circle">
-                {view.title === item.title && (
-                  <i className="fa-regular fa-circle-play"></i>
-                )}
-              </div>
+              className={`equalizer-bar ${
+                view.title === item.title ? "active" : ""
+              }`}
+              style={{ width: item.percentage + "%" }}
+            ></div>
+            <div className="equalizer-circle">
+              {view.title === item.title && (
+                <i className="fa-regular fa-circle-play"></i>
+              )}
             </div>
-          </>
+          </div>
         ))}
       </div>
     </StyledHistory>
