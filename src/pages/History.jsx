@@ -75,6 +75,12 @@ const StyledHistory = styled.section`
   overflow-y: auto;
   height: 100%;
   padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 180px 1fr;
+  gap: 2rem;
 
   .job-list {
     display: flex;
@@ -83,6 +89,7 @@ const StyledHistory = styled.section`
     justify-content: center;
     padding-bottom: 1rem;
   }
+
   .card {
     height: 200px;
     position: relative;
@@ -95,6 +102,7 @@ const StyledHistory = styled.section`
     border-radius: 30px;
     margin-bottom: 3rem;
   }
+
   .card::before {
     content: "";
     position: absolute;
@@ -110,6 +118,7 @@ const StyledHistory = styled.section`
     bottom: 24%;
     z-index: 9;
   }
+
   > p {
     text-align: center;
   }
@@ -131,6 +140,7 @@ const StyledHistory = styled.section`
     z-index: 10;
     padding: 6px;
   }
+
   .circle-content {
     width: 100%;
     height: 100%;
@@ -145,6 +155,7 @@ const StyledHistory = styled.section`
       font-size: 12px;
     }
   }
+
   .experience {
     color: var(--primary-color);
     display: block;
@@ -154,15 +165,11 @@ const StyledHistory = styled.section`
   .task-list {
     list-style: none;
     font-size: 11px;
-    width: 55%;
-    position: absolute;
-    right: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100%;
-    top: 0;
     li {
       padding-left: 1rem;
       position: relative;
@@ -181,30 +188,30 @@ const StyledHistory = styled.section`
     height: 150px;
     width: 100%;
     display: flex;
+    flex-direction: column;
     gap: 2rem;
-    justify-content: center;
   }
+
   .equalizer-item {
-    height: 100%;
-    width: 30px;
+    min-height: 30px;
+    width: 100%;
     box-shadow: -1px 1px 1px 1px var(--neumorphic-top),
       1px -1px 1px 0px var(--neumorphic-bottom);
     border-radius: 30px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     position: relative;
     display: flex;
     span {
       position: absolute;
       width: max-content;
-      writing-mode: vertical-rl;
-      line-height: 30px;
-      height: 90%;
+      right: 1rem;
     }
   }
+
   .equalizer-bar {
-    height: 50%;
-    width: 100%;
+    height: 100%;
+    width: 50%;
     background-color: var(--primary-color);
     border-radius: 30px;
     transition-duration: 300ms;
@@ -215,13 +222,19 @@ const StyledHistory = styled.section`
     height: 30px;
     border-radius: 50%;
     position: absolute;
-    background-color: var(--font-color);
+    background-color: var(--background);
     z-index: 1;
     bottom: -1px;
-    border: 5px solid var(--background);
+    border: 2px solid var(--font-color);
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
   }
+
   .active {
-    height: 100% !important;
+    width: 100% !important;
   }
 `;
 
@@ -230,24 +243,23 @@ const History = () => {
 
   return (
     <StyledHistory>
-      <Card className="card">
-        <div className="circle">
-          <div className="circle-content">
-            <p>
-              {view.title}
-              <span className="experience">{view.time}</span>
-            </p>
-          </div>
-        </div>
-        <ul className="task-list">
-          {view?.tasks.map((task, index) => (
-            <li key={index}>
-              <i className="fa-regular fa-circle-check"></i>
-              {task}
-            </li>
-          ))}
-        </ul>
-      </Card>
+      {view && (
+        <JobItem
+          indicator={<i className="fa-solid fa-info"></i>}
+          title={view.title}
+          job={view.job}
+          time={view.time}
+        >
+          <ul className="task-list">
+            {view?.tasks.map((task, index) => (
+              <li key={index}>
+                <i className="fa-regular fa-circle-check"></i>
+                {task}
+              </li>
+            ))}
+          </ul>
+        </JobItem>
+      )}
 
       <div className="equalizer">
         {list.map((item, index) => (
@@ -262,9 +274,13 @@ const History = () => {
                 className={`equalizer-bar ${
                   view.title === item.title ? "active" : ""
                 }`}
-                style={{ height: item.percentage + "%" }}
+                style={{ width: item.percentage + "%" }}
               ></div>
-              <div className="equalizer-circle"></div>
+              <div className="equalizer-circle">
+                {view.title === item.title && (
+                  <i className="fa-regular fa-circle-play"></i>
+                )}
+              </div>
             </div>
           </>
         ))}

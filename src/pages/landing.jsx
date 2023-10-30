@@ -18,7 +18,7 @@ const StyledLanding = styled.div`
   padding: 2rem 0 .5rem 0;
   display: grid;
   grid-template-areas: "header" "main" "menu";
-  grid-template-rows: 36px 1fr 38px;
+  grid-template-rows: 36px 1fr 40px;
   grid-template-columns: 1fr;
   gap: 20px;
   max-width: 600px;
@@ -47,8 +47,8 @@ function Landing() {
         <Carousel selected={title}>
           <Profile />
           <History />
-          <Tools />
           <Projects />
+          <Tools />
         </Carousel>
       </Main>
 
