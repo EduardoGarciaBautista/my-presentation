@@ -207,6 +207,9 @@ const StyledHistory = styled.section`
       width: max-content;
       right: 1rem;
     }
+    :hover {
+      cursor: pointer;
+    }
   }
 
   .equalizer-bar {

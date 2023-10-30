@@ -17,6 +17,9 @@ const StyledBaseButton = styled.button`
     line-height: normal;
   }
   color: ${(props) => (props.$active ? "var(--primary-color)" : props.$color)};
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 const StyledFlatButton = styled(StyledBaseButton)`

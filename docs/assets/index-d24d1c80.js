@@ -57,6 +57,9 @@ Error generating stack: `+i.message+`
     line-height: normal;
   }
   color: ${e=>e.$active?"var(--primary-color)":e.$color};
+  :hover {
+    cursor: pointer;
+  }
 `,Pm=q(Jf)`
   border-radius: 0;
   background-color: transparent;
@@ -392,6 +395,9 @@ Error generating stack: `+i.message+`
       position: absolute;
       width: max-content;
       right: 1rem;
+    }
+    :hover {
+      cursor: pointer;
     }
   }
 
