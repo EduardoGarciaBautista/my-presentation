@@ -73,7 +73,7 @@ const tools = [
   {
     title: "Java",
     icon: "fa-brands fa-java",
-  }
+  },
 ];
 
 const StyledTools = styled.section`
@@ -99,7 +99,7 @@ const Tools = () => {
   return (
     <StyledTools>
       <p>
-        Tools and technologies that ive used alongside my career as Developer
+        Tools and technologies that ive used throughout my career as Developer
       </p>
 
       <div className="tools-container">
