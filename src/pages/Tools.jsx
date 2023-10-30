@@ -31,6 +31,10 @@ const tools = [
     icon: "fa-regular fa-face-grin-squint",
   },
   {
+    title: "Jenkins",
+    icon: "fa-brands fa-jenkins",
+  },
+  {
     title: "Css",
     icon: "fa-brands fa-css3",
   },
@@ -66,6 +70,10 @@ const tools = [
     title: "Trello",
     icon: "fa-brands fa-trello",
   },
+  {
+    title: "Java",
+    icon: "fa-brands fa-java",
+  }
 ];
 
 const StyledTools = styled.section`
