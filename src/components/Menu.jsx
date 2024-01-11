@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import Button from "./Button";
 import { useState } from "react";
+import ButtonLink from "./ButtonLink";
 
 const StyledMenu = styled.footer`
   grid-area: menu;
@@ -71,20 +71,19 @@ export default function Menu({ onSelect }) {
       <ul>
         {buttons.map((button, index) => (
           <li key={index}>
-            <Button
-              className="button"
-              color="var(--font-color)"
+            <ButtonLink
               type="link"
-              link={`#carousel-item${index + 1}`}
-              active={button.active}
+              href={`#carousel-item${index + 1}`}
+              $active={button.active ? 1 : 0}
               onClick={() => handleActiveButton(button.text)}
+              size="small"
             >
               <i
                 className={`fa-solid ${button.icon} ${
                   button.active ? "fa-beat" : ""
                 }`}
               ></i>
-            </Button>
+            </ButtonLink>
           </li>
         ))}
       </ul>

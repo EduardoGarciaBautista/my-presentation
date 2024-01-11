@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Button from "./Button";
+import ButtonLink from "./ButtonLink";
 
 const options = [
   {
@@ -35,9 +35,14 @@ function Actions() {
   return (
     <StyledActions>
       {options.map((option) => (
-        <Button type="link" target="_blank" key={option.id} link={option.link}>
+        <ButtonLink
+          key={option.id}
+          href={option.link}
+          color="var(--primary-color)"
+          target="_blank"
+        >
           <i className={option.icon}></i>
-        </Button>
+        </ButtonLink>
       ))}
     </StyledActions>
   );

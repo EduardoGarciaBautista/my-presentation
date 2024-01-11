@@ -14,7 +14,7 @@ const StyledInfo = styled.section`
   p {
     font-size: 15px;
     color: var(--font-secondary-color);
-    text-align: justify;
+    text-align: center;
   }
 `;
 
