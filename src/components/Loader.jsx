@@ -124,6 +124,7 @@ const ScannerText = styled.p`
   color: var(--cyan);
   animation: ${blink} var(--scanner-duration) linear infinite,
     ${rotateHue} var(--scanner-duration) linear infinite;
+    font-size: 20px;
 `;
 
 const LOADET_TIME = 2000;
@@ -138,7 +139,7 @@ const Loader = () => {
     }, LOADET_TIME);
   }, []);
 
-  if (!isLoading) return null;
+  // if (!isLoading) return null;
 
   return (
     <Overlay>
