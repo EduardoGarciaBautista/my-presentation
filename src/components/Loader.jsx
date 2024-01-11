@@ -66,14 +66,14 @@ const Scaner = styled.div`
   width: var(--scanner-size);
   height: var(--scanner-size);
   position: relative;
-  background-image: url("/face-recognition-b.svg");
+  background-image: url("./face-recognition-b.svg");
   background-position: center;
   background-size: 100%;
   &::before {
     content: "";
     width: 100%;
     height: 0;
-    background-image: url("/face-recognition.svg");
+    background-image: url("./face-recognition.svg");
     background-size: 100%;
     position: absolute;
     animation: ${scannerAnimation} var(--scanner-duration) linear infinite,
