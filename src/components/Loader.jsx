@@ -139,7 +139,7 @@ const Loader = () => {
     }, LOADET_TIME);
   }, []);
 
-  // if (!isLoading) return null;
+  if (!isLoading) return null;
 
   return (
     <Overlay>
