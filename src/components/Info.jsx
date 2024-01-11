@@ -24,7 +24,7 @@ export default function Info() {
       <h1>Eduardo Garcia Bautista</h1>
       <h3>Front End Developer</h3>
       <p>
-        Front-end developer and Computational Systems Engineer with five years
+        Front-end developer and Computational Systems Engineer with more than five years
         of experience building web apps, using technologies like JavaScript,
         Angular, or React. In my free time, i like to study new technologies to
         improve my knowledge.

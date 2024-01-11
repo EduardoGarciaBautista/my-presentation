@@ -17,6 +17,9 @@ const GlobalStyles = createGlobalStyle`
         --circle-color-2: #f4f6f7;
         --circle-color-3: #f4f6f7;
         --disabled: #80808052;
+        --cyan:#12b0fb;
+        --scanner-duration: 1.5s;
+        --scanner-size: 200px;
     }
 
     @media (prefers-color-scheme: dark) {

@@ -1,8 +1,13 @@
-import Landing from './pages/landing'
+import Loader from "./components/Loader";
+import Landing from "./pages/landing";
 
 function App() {
-
-  return <Landing/>
+  return (
+    <>
+      <Loader />
+      <Landing />
+    </>
+  );
 }
 
-export default App
+export default App;
