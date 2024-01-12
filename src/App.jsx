@@ -5,7 +5,7 @@ import MenuProvider from "./contexts/MenuContext";
 function App() {
   return (
     <>
-      {/* <Loader /> */}
+      <Loader />
       <MenuProvider>
           <Landing />
         </MenuProvider>
