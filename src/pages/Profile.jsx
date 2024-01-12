@@ -12,6 +12,8 @@ const StyledProfile = styled.section`
   height: 100%;
   overflow-y: auto;
   padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 `;
 
 export default function Profile() {

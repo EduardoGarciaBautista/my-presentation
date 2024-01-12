@@ -296,6 +296,8 @@ Error generating stack: `+i.message+`
   height: 100%;
   overflow-y: auto;
   padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 `;function l0(){return x.jsxs(i0,{children:[x.jsx(t0,{route:o0}),x.jsx(bm,{}),x.jsx(r0,{})]})}const u0=$.main`
   overflow: hidden;
   grid-area: main;
