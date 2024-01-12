@@ -26,8 +26,9 @@ const ItemBox = styled.div`
       2px 2px 4px var(--neumorphic-bottom);
   }
   p {
-    font-size: 8px;
+    font-size: 10px;
     margin-top: 4px;
+    font-weight: 500;
   }
 `;
 

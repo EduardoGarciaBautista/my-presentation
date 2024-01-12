@@ -341,8 +341,9 @@ Error generating stack: `+i.message+`
       2px 2px 4px var(--neumorphic-bottom);
   }
   p {
-    font-size: 8px;
+    font-size: 10px;
     margin-top: 4px;
+    font-weight: 500;
   }
 `,p0=({title:e,icon:t})=>x.jsx(f0,{children:x.jsxs(d0,{className:"box",children:[x.jsx("i",{className:t}),x.jsx("p",{children:e})]})}),h0=$.div`
   display: flex;
@@ -358,6 +359,7 @@ Error generating stack: `+i.message+`
   > p {
     margin-bottom: 1rem;
     text-align: center;
+    padding: 0 1rem;
   }
 
   .tools-container {

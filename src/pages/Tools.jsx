@@ -83,6 +83,7 @@ const StyledTools = styled.section`
   > p {
     margin-bottom: 1rem;
     text-align: center;
+    padding: 0 1rem;
   }
 
   .tools-container {
