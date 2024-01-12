@@ -299,8 +299,6 @@ Error generating stack: `+i.message+`
 `;function l0(){return x.jsxs(i0,{children:[x.jsx(t0,{route:o0}),x.jsx(bm,{}),x.jsx(r0,{})]})}const u0=$.main`
   overflow: hidden;
   grid-area: main;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
   padding-bottom: 0;
   display: flex;
   justify-content: center;
@@ -463,19 +461,20 @@ Error generating stack: `+i.message+`
     color: var(--primary-color);
   }
   .left-content {
-    flex: 1;
+    flex: 1.1;
   }
 `,L0=$.h1`
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 700;
   line-height: 24px;
   margin-top: 0.5rem;
-`,R0=$.h3`
-  font-size: 9px;
-  font-weight: 400;
+`,R0=$.h2`
+  font-size: 12px;
+  font-weight: 600;
   line-height: 24px;
 `,$0=$.h3`
-  font-size: 8px;
+  font-size: 10px;
+  font-weight: 500;
 `,I0=({indicator:e,selectedJob:t={}})=>{if(!t)return null;const{title:n,time:r,job:o}=t;return x.jsxs(T0,{children:[x.jsxs("div",{className:"left-content",children:[x.jsx("span",{className:"indicator",children:e}),x.jsxs(L0,{children:[x.jsx("i",{className:"fa-solid fa-building-user"}),n]}),x.jsxs(R0,{children:[x.jsx("i",{className:"fa-solid fa-keyboard"})," ",o]}),x.jsxs($0,{children:[x.jsx("i",{className:"fa-solid fa-business-time"}),r]})]}),x.jsx(j0,{tasks:t==null?void 0:t.tasks})]})},O0=$.div`
   min-height: 30px;
   width: 100%;

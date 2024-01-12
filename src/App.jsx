@@ -7,8 +7,8 @@ function App() {
     <>
       <Loader />
       <MenuProvider>
-          <Landing />
-        </MenuProvider>
+        <Landing />
+      </MenuProvider>
     </>
   );
 }

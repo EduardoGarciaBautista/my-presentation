@@ -32,25 +32,26 @@ const StyledJobDetail = styled.div`
     color: var(--primary-color);
   }
   .left-content {
-    flex: 1;
+    flex: 1.1;
   }
 `;
 
 const Enterprise = styled.h1`
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 700;
   line-height: 24px;
   margin-top: 0.5rem;
 `;
 
-const JobTitle = styled.h3`
-  font-size: 9px;
-  font-weight: 400;
+const JobTitle = styled.h2`
+  font-size: 12px;
+  font-weight: 600;
   line-height: 24px;
 `;
 
 const JobTime = styled.h3`
-  font-size: 8px;
+  font-size: 10px;
+  font-weight: 500;
 `;
 
 const JobDetail = ({ indicator, selectedJob = {} }) => {

@@ -4,7 +4,6 @@ import Title from "../ui/Title";
 import Menu from "../ui/Menu";
 import Header from "../ui/Header";
 import Profile from "./Profile";
-import { useState } from "react";
 import Main from "../ui/Main";
 import Carousel from "../ui/Carousel";
 import Tools from "./Tools";
