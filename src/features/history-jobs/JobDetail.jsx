@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { useJobs } from "../../contexts/JobsContext";
 import JobsTaks from "./JobsTaks";
 
 const StyledJobDetail = styled.div`
@@ -54,8 +53,7 @@ const JobTime = styled.h3`
   font-size: 8px;
 `;
 
-const JobDetail = ({ indicator }) => {
-  const { selectedJob = {} } = useJobs();
+const JobDetail = ({ indicator, selectedJob = {} }) => {
 
   if (!selectedJob) return null;
 

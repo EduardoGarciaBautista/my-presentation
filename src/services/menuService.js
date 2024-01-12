@@ -5,6 +5,5 @@ export async function fetchMenu() {
       Accept: "application/json",
     },
   });
-  const data = await result.json();
-  return data;
+  return await result.json();
 }

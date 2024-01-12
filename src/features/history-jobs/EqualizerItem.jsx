@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { useJobs } from "../../contexts/JobsContext";
 
 const StyledEqualizerItem = styled.div`
   min-height: 30px;
@@ -50,15 +49,11 @@ const EqualizerCircle = styled.div`
   font-size: 12px;
 `;
 
-const EqualizerItem = ({ jobItem }) => {
-  const { selectedJob, dispatch } = useJobs();
+const EqualizerItem = ({ jobItem, selectedJob, selectJob }) => {
   const isActive = selectedJob.title === jobItem.title;
 
   function handleClick() {
-    dispatch({
-      type: "jobs/select",
-      payload: jobItem,
-    });
+    selectJob(jobItem);
   }
 
   return (

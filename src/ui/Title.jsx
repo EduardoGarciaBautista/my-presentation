@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useApp } from "../contexts/AppContext";
+import { useMenu } from "../contexts/MenuContext";
 
 const StyledTitle = styled.div`
   box-shadow: -5px -5px 10px 3px var(--neumorphic-top),
@@ -11,8 +11,8 @@ const StyledTitle = styled.div`
 `;
 
 function Title() {
-  const { title } = useApp();
-  return <StyledTitle>{title}</StyledTitle>;
+  const { selectedMenu } = useMenu();
+  return <StyledTitle>{selectedMenu?.text}</StyledTitle>;
 }
 
 export default Title;

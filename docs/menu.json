@@ -1,0 +1,22 @@
+[
+  {
+    "id": 0,
+    "icon": "fa-user",
+    "text": "Presentation"
+  },
+  {
+    "icon": "fa-timeline",
+    "text": "History Jobs",
+    "id": 1
+  },
+  {
+    "icon": "fa-regular fa-folder-open",
+    "text": "Projects",
+    "id": 2
+  },
+  {
+    "icon": "fa-code",
+    "text": "Tools",
+    "id": 3
+  }
+]

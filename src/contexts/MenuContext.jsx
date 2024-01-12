@@ -1,7 +1,15 @@
-import { createContext, useContext, useEffect, useReducer } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useMemo,
+  useReducer,
+} from "react";
 import { fetchMenu } from "../services/menuService";
+import { useRef } from "react";
+import { useFetch } from "../hooks/useFetch";
 const initialState = {
-  selectedMenu: "",
+  selectedMenu: null,
   menuOptions: [],
   isLoading: false,
 };
@@ -21,6 +29,12 @@ function reducer(state, action) {
         ...state,
         menuOptions: action.payload,
         selectedMenu: action.payload?.[0],
+        isLoading: false,
+      };
+    case "menu/loading":
+      return {
+        ...state,
+        isLoading: true,
       };
     default:
       return state;
@@ -33,21 +47,28 @@ function MenuProvider({ children }) {
     initialState
   );
 
-  useEffect(() => {
-    if (menuOptions.length === 0) {
-      (async () => {
-        const data = await fetchMenu();
-        dispatch({
-          type: "menu/load",
-          payload: data,
-        });
-      })();
-    }
-  }, [menuOptions.length]);
+  const loading = () =>
+    dispatch({
+      type: "menu/loading",
+    });
+
+  const loadOptions = (data) =>
+    dispatch({
+      type: "menu/load",
+      payload: data,
+    });
+
+  const selectOption = (option) =>
+    dispatch({
+      type: "menu/select",
+      payload: option,
+    });
+
+  useFetch({ loading, loadData: loadOptions, fetch: fetchMenu });
 
   return (
     <MenuContext.Provider
-      value={{ isLoading, selectedMenu, menuOptions, dispatch }}
+      value={{ isLoading, selectedMenu, menuOptions, selectOption }}
     >
       {children}
     </MenuContext.Provider>

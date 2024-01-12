@@ -1,0 +1,68 @@
+[
+  {
+    "title": "Indra",
+    "job": "Front End Developer",
+    "icon": "fa-brands fa-html5",
+    "time": "Jun 2022 - Present",
+    "tasks": [
+      "Apis integration",
+      "UI designs to web pages",
+      "Mobile first design",
+      "Reverse proxies",
+      "Task documentation",
+      "Fix production defects",
+      "User stories analysis",
+      "Join me to scrum ceremonies",
+      "Code review",
+      "Deploy features into different environments "
+    ],
+    "percentage": 40
+  },
+  {
+    "title": "Neoris",
+    "job": "Front End Developer",
+    "icon": "fa-brands fa-html5",
+    "time": "Feb 2021 - Jun 2022",
+    "tasks": [
+      "Apis integration",
+      "Third party libraries",
+      "UI designs to web pages",
+      "Responsive design",
+      "Google maps integration",
+      "Translate whole page to different languages",
+      "Creation of new modules and features",
+      "Fix production bugs"
+    ],
+    "percentage": 40
+  },
+  {
+    "title": "Upax",
+    "job": "Front End Developer",
+    "icon": "fa-brands fa-html5",
+    "time": "Jun 2020 - Nov 2020",
+    "tasks": [
+      "Apis integration",
+      "Third party libraries",
+      "UI designs to web pages",
+      "Responsive design",
+      "React js experience"
+    ],
+    "percentage": 40
+  },
+  {
+    "title": "IDS Comercial",
+    "job": "Full Stack Developer",
+    "icon": "fa-brands fa-html5",
+    "time": "Sep 2018 - Jun 2020",
+    "tasks": [
+      "Bootstrap integration",
+      "Apis integration",
+      "Data base tables update",
+      "Update API endpoints",
+      "Fix bugs",
+      "User stories analysis",
+      "Use cases analysis"
+    ],
+    "percentage": 40
+  }
+]

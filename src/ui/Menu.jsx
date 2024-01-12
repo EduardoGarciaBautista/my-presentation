@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import ButtonLink from "./ButtonLink";
 import { useMenu } from "../contexts/MenuContext";
-import { useApp } from "../contexts/AppContext";
 
 const StyledMenu = styled.footer`
   grid-area: menu;
@@ -34,18 +33,10 @@ const StyledMenu = styled.footer`
 `;
 
 export default function Menu() {
-  const { dispatch, selectedMenu, menuOptions } = useMenu();
-  const { dispatch: dispatchTitle } = useApp();
+  const { selectOption, selectedMenu, menuOptions } = useMenu();
 
   function handleActiveButton(selected) {
-    dispatch({
-      type: "menu/select",
-      payload: selected,
-    });
-    dispatchTitle({
-      type: "app/title",
-      payload: selected.text,
-    });
+    selectOption(selected);
   }
 
   return (

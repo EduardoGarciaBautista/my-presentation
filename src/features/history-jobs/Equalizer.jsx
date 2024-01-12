@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import EqualizerItem from "./EqualizerItem";
-import { useJobs } from "../../contexts/JobsContext";
 
 const StyledEqualizer = styled.div`
   height: 150px;
@@ -10,17 +9,11 @@ const StyledEqualizer = styled.div`
   gap: 2rem;
 `;
 
-const Equalizer = () => {
-  const { jobList } = useJobs();
+const Equalizer = ({children}) => {
 
   return (
     <StyledEqualizer className="equalizer">
-      {jobList.map((jobItem) => (
-        <EqualizerItem
-          jobItem={jobItem}
-          key={jobItem.title}
-        />
-      ))}
+      {children}
     </StyledEqualizer>
   );
 };
