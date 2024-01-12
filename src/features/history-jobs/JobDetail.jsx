@@ -1,6 +1,8 @@
 import styled from "styled-components";
+import { useJobs } from "../../contexts/JobsContext";
+import JobsTaks from "./JobsTaks";
 
-const StyledJobItem = styled.div`
+const StyledJobDetail = styled.div`
   height: fit-content;
   border-radius: 15px;
   padding: 8px;
@@ -25,60 +27,59 @@ const StyledJobItem = styled.div`
       margin: 0;
     }
   }
-  h1 {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 24px;
-    margin-top: 0.5rem;
-  }
-  h3 {
-    font-size: 9px;
-    font-weight: 400;
-    line-height: 24px;
-  }
-  p {
-    font-size: 8px;
-  }
   i {
     margin-right: 4px;
     font-size: 10px;
     color: var(--primary-color);
   }
-  .content {
-    flex: 1.5;
-  }
   .left-content {
     flex: 1;
   }
 `;
-const JobItem = ({
-  children,
-  title,
-  job,
-  time,
-  indicator,
-  onSelected,
-  activeItem,
-}) => {
+
+const Enterprise = styled.h1`
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 0.5rem;
+`;
+
+const JobTitle = styled.h3`
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 24px;
+`;
+
+const JobTime = styled.h3`
+  font-size: 8px;
+`;
+
+const JobDetail = ({ indicator }) => {
+  const { selectedJob = {} } = useJobs();
+
+  if (!selectedJob) return null;
+
+  const { title, time, job } = selectedJob;
+
   return (
-    <StyledJobItem onClick={onSelected} $activeItem={activeItem}>
+    <StyledJobDetail>
       <div className="left-content">
         <span className="indicator">{indicator}</span>
-        <h1>
+        <Enterprise>
           <i className="fa-solid fa-building-user"></i>
           {title}
-        </h1>
-        <h3>
+        </Enterprise>
+        <JobTitle>
           <i className="fa-solid fa-keyboard"></i> {job}
-        </h3>
-        <p>
+        </JobTitle>
+        <JobTime>
           <i className="fa-solid fa-business-time"></i>
           {time}
-        </p>
+        </JobTime>
       </div>
-      <div className="content">{children}</div>
-    </StyledJobItem>
+      <JobsTaks tasks={selectedJob?.tasks} />
+    </StyledJobDetail>
   );
 };
 
-export default JobItem;
+export default JobDetail;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ButtonLink from "./ButtonLink";
+import ButtonLink from "../../ui/ButtonLink";
 
 const options = [
   {

@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { useState } from "react";
 import ButtonLink from "./ButtonLink";
+import { useMenu } from "../contexts/MenuContext";
+import { useApp } from "../contexts/AppContext";
 
 const StyledMenu = styled.footer`
   grid-area: menu;
@@ -31,51 +32,32 @@ const StyledMenu = styled.footer`
     font-size: 12px;
   }
 `;
-const fixedButtons = [
-  {
-    icon: "fa-user",
-    text: "Presentation",
-    active: true,
-  },
-  {
-    icon: "fa-timeline",
-    text: "History",
-    active: false,
-  },
-  {
-    icon: "fa-regular fa-folder-open",
-    text: "Projects",
-    active: false,
-  },
-  {
-    icon: "fa-code",
-    text: "Tools",
-    active: false,
-  },
-];
-export default function Menu({ onSelect }) {
-  const [buttons, setButtons] = useState(fixedButtons);
+
+export default function Menu() {
+  const { dispatch, selectedMenu, menuOptions } = useMenu();
+  const { dispatch: dispatchTitle } = useApp();
 
   function handleActiveButton(selected) {
-    setButtons((currentButtons) =>
-      currentButtons.map((button) => ({
-        ...button,
-        active: button.text === selected,
-      }))
-    );
-    onSelect(selected);
+    dispatch({
+      type: "menu/select",
+      payload: selected,
+    });
+    dispatchTitle({
+      type: "app/title",
+      payload: selected.text,
+    });
   }
 
   return (
     <StyledMenu>
       <ul>
-        {buttons.map((button, index) => (
+        {menuOptions.map((button, index) => (
           <li key={index}>
             <ButtonLink
               type="link"
               href={`#carousel-item${index + 1}`}
-              $active={button.active ? 1 : 0}
-              onClick={() => handleActiveButton(button.text)}
+              $active={selectedMenu.id === button.id}
+              onClick={() => handleActiveButton(button)}
               size="small"
             >
               <i

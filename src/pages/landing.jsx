@@ -1,15 +1,16 @@
-import styled from "styled-components";
-import Button from "../components/Button";
-import Title from "../components/Title";
-import Menu from "../components/Menu";
-import Header from "../components/Header";
+
+import Button from "../ui/Button";
+import Title from "../ui/Title";
+import Menu from "../ui/Menu";
+import Header from "../ui/Header";
 import Profile from "./Profile";
 import { useState } from "react";
-import Main from "../components/Main";
-import Carousel from "../components/Carousel";
-import History from "./History";
+import Main from "../ui/Main";
+import Carousel from "../ui/Carousel";
 import Tools from "./Tools";
 import Projects from "./Projects";
+import HistoryJobs from "./HistoryJobs";
+import styled from "styled-components";
 
 const StyledLanding = styled.div`
   background-color: var(--primary);
@@ -25,11 +26,6 @@ const StyledLanding = styled.div`
 `;
 
 function Landing() {
-  const [title, setTitle] = useState("Presentation");
-
-  function handleSelectMenuOption(option) {
-    setTitle(option);
-  }
 
   return (
     <StyledLanding>
@@ -37,22 +33,22 @@ function Landing() {
         <Button>
           <i className="fa-solid fa-sun"></i>
         </Button>
-        <Title title={title} />
+        <Title />
         <Button>
           <i className="fa-solid fa-moon"></i>
         </Button>
       </Header>
 
       <Main>
-        <Carousel selected={title}>
+        <Carousel>
           <Profile />
-          <History />
+          <HistoryJobs />
           <Projects />
           <Tools />
         </Carousel>
       </Main>
 
-      <Menu onSelect={handleSelectMenuOption} />
+      <Menu />
     </StyledLanding>
   );
 }

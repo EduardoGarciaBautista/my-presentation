@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useApp } from "../contexts/AppContext";
 
 const StyledTitle = styled.div`
   box-shadow: -5px -5px 10px 3px var(--neumorphic-top),
@@ -9,7 +10,8 @@ const StyledTitle = styled.div`
   letter-spacing: 4px;
 `;
 
-function Title({title}) {
+function Title() {
+  const { title } = useApp();
   return <StyledTitle>{title}</StyledTitle>;
 }
 

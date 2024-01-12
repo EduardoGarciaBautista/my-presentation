@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import ToolItem from "../components/ToolItem";
+import ToolItem from "../features/Tools/ToolItem";
+import ToolsList from "../features/Tools/ToolsList";
 
 const tools = [
   {
@@ -85,13 +86,6 @@ const StyledTools = styled.section`
   }
 
   .tools-container {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 1rem;
-    row-gap: 1rem;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
   }
 `;
 
@@ -102,11 +96,11 @@ const Tools = () => {
         Tools and technologies that ive used throughout my career as Developer
       </p>
 
-      <div className="tools-container">
+      <ToolsList>
         {tools.map((tool, index) => {
           return <ToolItem key={index} title={tool.title} icon={tool.icon} />;
         })}
-      </div>
+      </ToolsList>
     </StyledTools>
   );
 };
