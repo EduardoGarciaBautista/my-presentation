@@ -1,0 +1,23 @@
+{
+  "name": "Eduardo Garcia Bautista",
+  "jobDescription": "Front End Developer",
+  "description": "Front-end developer and Computational Systems Engineer with more than five years of experience building web apps, using technologies like JavaScript, Angular, or React. In my free time, i like to study new technologies to improve my knowledge.",
+  "profileImg": "https://res.cloudinary.com/dv6lfepzc/image/upload/v1668789057/profile_vihmh0.jpg",
+  "actions": [
+    {
+      "id": 1,
+      "icon": "fa-brands fa-linkedin-in",
+      "link": "https://www.linkedin.com/in/eduardogb97"
+    },
+    {
+      "id": 2,
+      "icon": "fa-brands fa-github",
+      "link": "https://github.com/EduardoGarciaBautista"
+    },
+    {
+      "id": 4,
+      "icon": "fa-solid fa-phone-volume",
+      "link": "tel:5521945266"
+    }
+  ]
+}

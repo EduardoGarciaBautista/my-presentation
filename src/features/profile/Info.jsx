@@ -18,17 +18,12 @@ const StyledInfo = styled.section`
   }
 `;
 
-export default function Info() {
+export default function Info({ profile ={} }) {
   return (
     <StyledInfo>
-      <h1>Eduardo Garcia Bautista</h1>
-      <h3>Front End Developer</h3>
-      <p>
-        Front-end developer and Computational Systems Engineer with more than five years
-        of experience building web apps, using technologies like JavaScript,
-        Angular, or React. In my free time, i like to study new technologies to
-        improve my knowledge.
-      </p>
+      <h1>{profile.name}</h1>
+      <h3>{profile.jobDescription}</h3>
+      <p>{profile.description}</p>
     </StyledInfo>
   );
 }
