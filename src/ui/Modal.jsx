@@ -13,14 +13,18 @@ const Overlay = styled.div`
 `;
 
 const Content = styled.div`
-  max-width: 80vw;
   max-height: 80dvh;
+  max-width: 90vw;
   padding: 1rem;
   background-color: var(--background);
   box-shadow: -10px -10px 10px 0px var(--neumorphic-top),
     10px 10px 10px 0px var(--neumorphic-bottom);
   border-radius: 25px;
   position: relative;
+
+  @media only screen and (min-width: 800px) {
+    max-width: 650px;
+  }
 `;
 
 const StyledClose = styled.span`

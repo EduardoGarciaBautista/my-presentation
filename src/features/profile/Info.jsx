@@ -1,8 +1,11 @@
 import styled from "styled-components";
 import Modal from "../../ui/Modal";
 import { useBrowser } from "../../hooks/useBrowser";
+import { getScreenHeigth } from "../../utils/utils";
 
 const SLICE_SIZE = 200;
+const SCREEN_SIZE = 615;
+const SLICE_SIZE_SMALLEST = 180;
 
 const StyledInfo = styled.section`
   text-align: center;
@@ -42,7 +45,10 @@ export default function Info({ profile = {} }) {
   const { isMovile } = useBrowser();
 
   const description = isMovile
-    ? profile.description.slice(0, SLICE_SIZE)
+    ? profile.description.slice(
+        0,
+        getScreenHeigth() <= SCREEN_SIZE ? SLICE_SIZE_SMALLEST : SLICE_SIZE
+      )
     : profile.description;
   return (
     <StyledInfo>
