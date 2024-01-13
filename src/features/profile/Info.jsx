@@ -65,7 +65,7 @@ export default function Info({ profile = {} }) {
           <Modal.Close>
             <i className="fa-regular fa-circle-xmark"></i>
           </Modal.Close>
-          <FullInfo>{description}</FullInfo>
+          <FullInfo>{profile.description}</FullInfo>
         </Modal.Window>
       </Modal>
     </StyledInfo>
