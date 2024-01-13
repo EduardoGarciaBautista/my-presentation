@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Modal from "../../ui/Modal";
 import { useBrowser } from "../../hooks/useBrowser";
 
-const SLICE_SIZE = 250;
+const SLICE_SIZE = 200;
 
 const StyledInfo = styled.section`
   text-align: center;
@@ -48,14 +48,14 @@ export default function Info({ profile = {} }) {
     <StyledInfo>
       <h1>{profile.name}</h1>
       <h3>{profile.jobDescription}</h3>
-      <Modal title="More about me">
+      <Modal title="More about me 🐱‍💻">
         <ShortInfo>
           {description}
           {isMovile && (
             <>
               ...
               <Modal.Open>
-                <span>Ver más</span>
+                <span>See more</span>
               </Modal.Open>
             </>
           )}
