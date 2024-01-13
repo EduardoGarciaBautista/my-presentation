@@ -6,6 +6,7 @@ const Overlay = styled.div`
   position: fixed;
   inset: 0;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   display: flex;
   justify-content: center;
   align-items: center;
