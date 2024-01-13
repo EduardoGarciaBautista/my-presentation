@@ -48,7 +48,7 @@ export default function Info({ profile = {} }) {
     <StyledInfo>
       <h1>{profile.name}</h1>
       <h3>{profile.jobDescription}</h3>
-      <Modal title="More about me 🐱‍💻">
+      <Modal title="More about me">
         <ShortInfo>
           {description}
           {isMovile && (
@@ -65,7 +65,7 @@ export default function Info({ profile = {} }) {
           <Modal.Close>
             <i className="fa-regular fa-circle-xmark"></i>
           </Modal.Close>
-          <FullInfo>{profile.description}</FullInfo>
+          <FullInfo>{description}</FullInfo>
         </Modal.Window>
       </Modal>
     </StyledInfo>
