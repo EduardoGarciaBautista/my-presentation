@@ -5,7 +5,7 @@ import { getScreenHeigth } from "../../utils/utils";
 
 const SLICE_SIZE = 200;
 const SCREEN_SIZE = 615;
-const SLICE_SIZE_SMALLEST = 180;
+const SLICE_SIZE_SMALLEST = 170;
 
 const StyledInfo = styled.section`
   text-align: center;
