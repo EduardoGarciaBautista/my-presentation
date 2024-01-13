@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import Button from "./Button";
+import Title from "./Title";
 
 const StyledHeader = styled.header`
   display: flex;
@@ -23,6 +25,16 @@ const StyledHeader = styled.header`
   }
 `;
 
-export default function Header({ children }) {
-  return <StyledHeader>{children}</StyledHeader>;
+export default function Header() {
+  return (
+    <StyledHeader>
+      <Button>
+        <i className="fa-solid fa-sun"></i>
+      </Button>
+      <Title />
+      <Button>
+        <i className="fa-solid fa-moon"></i>
+      </Button>
+    </StyledHeader>
+  );
 }

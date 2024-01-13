@@ -1,6 +1,3 @@
-
-import Button from "../ui/Button";
-import Title from "../ui/Title";
 import Menu from "../ui/Menu";
 import Header from "../ui/Header";
 import Profile from "./Profile";
@@ -15,7 +12,7 @@ const StyledLanding = styled.div`
   background-color: var(--primary);
   color: var(--secondary);
   height: 100dvh;
-  padding: 2rem 0 .5rem 0;
+  padding: 2rem 0 0.5rem 0;
   display: grid;
   grid-template-areas: "header" "main" "menu";
   grid-template-rows: 36px 1fr 50px;
@@ -25,18 +22,9 @@ const StyledLanding = styled.div`
 `;
 
 function Landing() {
-
   return (
     <StyledLanding>
-      <Header>
-        <Button>
-          <i className="fa-solid fa-sun"></i>
-        </Button>
-        <Title />
-        <Button>
-          <i className="fa-solid fa-moon"></i>
-        </Button>
-      </Header>
+      <Header />
 
       <Main>
         <Carousel>
