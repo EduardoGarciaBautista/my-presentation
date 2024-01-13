@@ -124,30 +124,23 @@ const ScannerText = styled.p`
   color: var(--cyan);
   animation: ${blink} var(--scanner-duration) linear infinite,
     ${rotateHue} var(--scanner-duration) linear infinite;
-    font-size: 20px;
+  font-size: 20px;
 `;
 
-const LOADET_TIME = 2000;
-
-const Loader = () => {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-      return () => clearTimeout(timer);
-    }, LOADET_TIME);
-  }, []);
-
-  if (!isLoading) return null;
-
+const Loader = ({ type = "complete", text = "Loading..." }) => {
+  if (type === "text") {
+    return (
+      <Overlay>
+        <ScannerText>{text}</ScannerText>
+      </Overlay>
+    );
+  }
   return (
     <Overlay>
       <Circle>
         <Scaner />
       </Circle>
-
-      <ScannerText>Loading...</ScannerText>
+      <ScannerText>{text}</ScannerText>
     </Overlay>
   );
 };

@@ -29,11 +29,12 @@ const Content = styled.div`
 
 const StyledClose = styled.span`
   position: absolute;
-  right: 1rem;
-  top: 1.2rem;
-  font-size: 20px;
+  right: 0;
+  top: 0;
+  font-size: 25px;
   cursor: pointer;
   transition: all 300ms;
+  color: ${(props) => props.$color};
   &:hover {
     color: var(--primary-color);
   }
@@ -42,9 +43,9 @@ const StyledClose = styled.span`
 const Title = styled.p`
   font-size: 25px;
   font-weight: 700;
-  padding-right: 2rem;
   border-bottom: 1px solid var(--font-secondary-color);
   margin-bottom: 1rem;
+  text-align: center;
 `;
 
 const initialState = {
@@ -78,10 +79,10 @@ function Open({ children }) {
   return cloneElement(children, { onClick: () => toggle() });
 }
 
-function Close({ children }) {
+function Close({ children, color = "var(--primary-color)" }) {
   const { toggle } = useContext(ModalContext);
   return (
-    <StyledClose>
+    <StyledClose $color={color}>
       {cloneElement(children, { onClick: () => toggle() })}
     </StyledClose>
   );

@@ -1,3 +1,3 @@
 export function getScreenHeigth() {
-  return window.innerHeight;
+  return document.documentElement.clientHeight;
 }

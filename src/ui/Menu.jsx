@@ -53,7 +53,7 @@ export default function Menu() {
             >
               <i
                 className={`fa-solid ${button.icon} ${
-                  button.active ? "fa-beat" : ""
+                  selectedMenu.id === button.id ? "fa-beat" : ""
                 }`}
               ></i>
             </ButtonLink>

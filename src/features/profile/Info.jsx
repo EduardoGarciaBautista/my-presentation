@@ -3,8 +3,8 @@ import Modal from "../../ui/Modal";
 import { useBrowser } from "../../hooks/useBrowser";
 import { getScreenHeigth } from "../../utils/utils";
 
-const SLICE_SIZE = 200;
-const SCREEN_SIZE = 615;
+const SLICE_SIZE = 230;
+const SCREEN_SIZE = 630;
 const SLICE_SIZE_SMALLEST = 170;
 
 const StyledInfo = styled.section`
@@ -22,11 +22,15 @@ const StyledInfo = styled.section`
 
 const FullInfo = styled.p`
   color: var(--font-secondary-color);
+  text-align: justify;
+  padding: 0 1rem;
+  line-height: 1.5rem;
 `;
 
 const ShortInfo = styled.p`
   font-size: 15px;
   color: var(--font-secondary-color);
+  text-align: justify;
   > span {
     font-size: 15px;
     background-color: transparent;
@@ -44,12 +48,12 @@ const ShortInfo = styled.p`
 export default function Info({ profile = {} }) {
   const { isMovile } = useBrowser();
 
+  const slice =
+    getScreenHeigth() < SCREEN_SIZE ? SLICE_SIZE_SMALLEST : SLICE_SIZE;
   const description = isMovile
-    ? profile.description.slice(
-        0,
-        getScreenHeigth() <= SCREEN_SIZE ? SLICE_SIZE_SMALLEST : SLICE_SIZE
-      )
+    ? profile.description.slice(0, slice)
     : profile.description;
+
   return (
     <StyledInfo>
       <h1>{profile.name}</h1>

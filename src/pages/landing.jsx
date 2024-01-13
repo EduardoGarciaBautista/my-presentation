@@ -1,12 +1,15 @@
+import { lazy } from "react";
+
 import Menu from "../ui/Menu";
 import Header from "../ui/Header";
-import Profile from "./Profile";
 import Main from "../ui/Main";
 import Carousel from "../ui/Carousel";
-import Tools from "./Tools";
-import Projects from "./Projects";
-import HistoryJobs from "./HistoryJobs";
 import styled from "styled-components";
+
+const Profile = lazy(() => import("./Profile"));
+const HistoryJobs = lazy(() => import("./HistoryJobs"));
+const Projects = lazy(() => import("./Projects"));
+const Tools = lazy(() => import("./Tools"));
 
 const StyledLanding = styled.div`
   background-color: var(--primary);

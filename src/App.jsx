@@ -1,15 +1,15 @@
-import Loader from "./ui/Loader";
-import Landing from "./pages/landing";
 import MenuProvider from "./contexts/MenuContext";
+import { Suspense, lazy } from "react";
+import Loader from "./ui/Loader";
+const Landing = lazy(() => import("./pages/landing"));
 
 function App() {
   return (
-    <>
-      <Loader />
+    <Suspense fallback={<Loader type="text" />}>
       <MenuProvider>
         <Landing />
       </MenuProvider>
-    </>
+    </Suspense>
   );
 }
 

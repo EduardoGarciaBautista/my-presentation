@@ -5,6 +5,7 @@ import Info from "../features/profile/Info";
 import { useReducer } from "react";
 import { useFetch } from "../hooks/useFetch";
 import { fetchProfile } from "../services/profileService";
+import Loader from "../ui/Loader";
 
 const initialState = {
   isLoading: false,
@@ -42,7 +43,8 @@ const StyledProfile = styled.section`
 `;
 
 export default function Profile() {
-  const [{ profile }, dispatch] = useReducer(reducer, initialState);
+  const [{ isLoading, profile }, dispatch] = useReducer(reducer, initialState);
+  console.log(isLoading);
 
   const loading = () =>
     dispatch({
@@ -61,6 +63,7 @@ export default function Profile() {
     fetch: fetchProfile,
   });
 
+  if (isLoading) return <Loader />;
   if (!profile) return;
 
   const { profileImg, actions } = profile;
